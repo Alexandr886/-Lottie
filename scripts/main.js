@@ -3,7 +3,7 @@ let animationWalkingMan = lottie.loadAnimation({
     container: document.getElementById('walking-man'),
     render: 'svg',
     loop: true,
-    path: '/images/lottie/walking_man.json'
+    path: 'images/lottie/walking_man.json'
 })
 
 
@@ -13,7 +13,7 @@ let animationLemon = lottie.loadAnimation({
     container: document.getElementById('lemon'),
     render: 'svg',
     loop: true,
-    path: '/images/lottie/lemon.json'
+    path: 'images/lottie/lemon.json'
 })
 
 const btnPlayLemon = document.getElementById('lemon-play');
@@ -46,7 +46,7 @@ let animationLoading = lottie.loadAnimation({
     container: loadingAnim,
     render: 'svg',
     loop: false,
-    path: '/images/lottie/loading.json'
+    path: 'images/lottie/loading.json'
 })
 
 let directionAnim = 1;
@@ -71,7 +71,7 @@ let animationCamel = lottie.loadAnimation({
     container: camelAnim,
     render: 'svg',
     loop: true,
-    path: '/images/lottie/camel.json'
+    path: 'images/lottie/camel.json'
 })
 
 let camelPlay = false;
