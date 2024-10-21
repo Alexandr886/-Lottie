@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Знакомство с Lottie</title>
+</head>
+<body>
+    <div class="container">
+        <details class="description">
+            <summary>Мини-конспект</summary>
+            <p><b>1.</b> Анимация Lottie. В данном случае библиотека Lottie подключена через CDN (файл scripts/lottie.min.js), который взят <a href="https://cdnjs.com/libraries/lottie-web" target="_blank">отсюда</a></p>
+            <p><b>2.</b> Затем <a href="https://lottiefiles.com/featured-free-animations" target="_blank">здесь</a> была выбрана одна из бесплатных анимаций. Кликнув по нужной анимации открывается окно, где через кнопку Download (справа сверху) будет переход на новую страницу с этой анимацией. Там в правой панели нужно загрузить себе анимацию как JSON.</p>
+            <p><b>3.</b> JSON файл положить себе в проект, а затем создать в разметке контейнер с уникальным классом или ID для взаимодействия с этим файлом.</p>
+            <p><b>4.</b> Затем в скрипте вызвать анимацию по этому примеру:
+                <br>
+                <br>let animation = lottie.loadAnimation({
+                <br>    container: document.getElementById('уникальный ID'),
+                <br>    render: 'svg',
+                <br>    loop: true,
+                <br>    path: 'путь к JSON'
+                <br>})
+            </p>
+            <br>
+            <p><b>5.</b> При необходимости задать стили</p>
+            <p><b>6.</b> Методы для управления анимацией из JS описаны <a href="https://developers.lottiefiles.com/docs/dotlottie-player/dotlottie-web/methods/" target="_blank">тут</a>. Разные примеры можно глянуть <a href="https://developers.lottiefiles.com/docs/dotlottie-player/dotlottie-web/usage/" target="_blank">здесь</a></p>
+            <p><b>P.S.</b> вообще JSON должен предоставлять дизайнер</p>
+            <p><b>P.P.S.</b> при желании и упорстве в JSON можно изменить цвета. По параметру Fill можно найти массив [] из трех значений - это RGB формат.</p>
+        </details>
+        
+        <div>
+            <p>Анимация по дефолту</p>
+            <div class="animation-lottie" id="walking-man"></div>
+        </div>
+
+        <div>
+            <p>Анимация по кнопкам управления</p>
+            <div class="buttons">
+                <button class="button" id="lemon-play">Play</button>
+                <button class="button" id="lemon-stop">Stop</button>
+            </div>
+            <div class="animation-lottie" id="lemon"></div>
+        </div>
+
+        <div>
+            <p>Анимация по ховеру</p>
+            <div class="animation-lottie" id="loading"></div>
+        </div>
+
+        <div>
+            <p>Анимация по клику на анимацию</p>
+            <div class="animation-lottie" id="camel"></div>
+            <div class="buttons">
+                <button class="button" id="camel-faster">Быстрее</button>
+                <button class="button" id="camel-slower">Медленнее</button>
+                <!-- <button class="button" id="lemon-stop">Stop</button> -->
+                 <p id="camel-speed-text" style="color: red;"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="scripts/lottie.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
